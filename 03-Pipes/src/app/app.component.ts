@@ -8,13 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'pipe';
   nombre = 'Capitan America';
-  nombre2= 'vIcToR rIgObErTo';
+  nombre2 = 'vIcToR rIgObErTo';
   arreglo = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   pi: number = Math.PI;
   porcentaje = 0.234;
   idioma = 'fr';
   salario = 1234.5;
   fecha: Date = new Date();
+  activar = true;
+  videoUrl = 'https://www.youtube.com/embed/wRo3sd9sv-E'; // Hay que colocar el url del link del video
   heroe = {
     nombre: 'Logan',
     clave: 'Wolverine',
