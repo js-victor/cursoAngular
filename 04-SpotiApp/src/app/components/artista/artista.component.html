@@ -32,7 +32,9 @@
                     <td> {{ tracks.album.name }} </td>
                     <td> {{ tracks.name }} </td>
                     <td>
-                        <audio [src]="tracks.preview_url" controls></audio>
+                        <!-- <audio [src]="tracks.preview_url" controls></audio> -->
+                        <!-- <iframe [src]="tracks.uri | domseguro : 'https://open.spotify.com/embed?uri='  " width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+                        <iframe [src]="tracks.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                     </td>
                 </tr>
             </tbody>
