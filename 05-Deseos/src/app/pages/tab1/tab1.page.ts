@@ -56,6 +56,10 @@ export class Tab1Page {
     await alert.present();
   }
 
+  listaSeleccionada( lista: Lista) {
+    this.router.navigateByUrl(`/tabs/agregar/${ lista.id }`);
+  }
+
 
 
 
