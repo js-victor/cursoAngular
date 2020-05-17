@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DeseosService } from 'src/app/services/deseos.service';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+import { Lista } from '../../models/lista.model';
 
 @Component({
   selector: 'app-listas',
@@ -7,8 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListasComponent implements OnInit {
 
-  constructor() { }
+  @Input() terminada = true;
+
+  constructor(public deseosService: DeseosService,
+              private router: Router,
+              private alertController: AlertController) { }
 
   ngOnInit() {}
+
+  listaSeleccionada( lista: Lista) {
+    if ( this.terminada ) {
+      this.router.navigateByUrl(`/tabs/tab2/agregar/${ lista.id }`);
+    } else {
+      this.router.navigateByUrl(`/tabs/tab1/agregar/${ lista.id }`);
+    }
+  }
+
+  borrarLista( lista: Lista) {
+    this.deseosService.borrarLista( lista );
+  }
 
 }
