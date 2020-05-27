@@ -1,5 +1,5 @@
 <div [ngClass]="alerta" class="alert" role="alert">
-  <strong>Well done!</strong> This is a success alert—check it out!
+    <strong>Well done!</strong> This is a success alert—check it out!
 </div>
 
 <button type="button" class="btn btn-info mr-1" name="button" (click)="alerta = 'alert-info'">Info</button>
@@ -8,7 +8,7 @@
 <br><br>
 
 <h3 [ngClass]=" { 'text-danger': propiedades.danger, 'text-info': !propiedades.danger  } ">
-  Hola Mundo
+    Hola Mundo
 </h3>
 
 <button type="button" name="button" class="btn" [ngClass]="{ 'btn-danger': propiedades.danger, 'btn-info': !propiedades.danger }" (click)="propiedades.danger = !propiedades.danger">
