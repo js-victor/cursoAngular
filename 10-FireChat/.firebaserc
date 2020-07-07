@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "firechat-cbfa6": {
+      "hosting": {
+        "fireChat": [
+          "firechat-cbfa6"
+        ]
+      }
+    }
+  }
+}
